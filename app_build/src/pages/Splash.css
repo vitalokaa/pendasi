@@ -1,0 +1,121 @@
+/* Splash */
+.splash {
+  min-height: 100vh;
+  /* background: var(--orange); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: var(--orange) url('../assets/bg.png') center/cover no-repeat;
+  overflow: hidden;
+  /* padding: 32px 24px; */
+}
+
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  z-index: 1;
+}
+
+
+.illo-deco {
+  position: absolute;
+  font-size: 24px;
+  animation: floatDeco 3s ease-in-out infinite;
+}
+
+.illo-deco1 {
+  top: 0;
+  right: 8px;
+  animation-delay: 0s;
+}
+
+.illo-deco2 {
+  bottom: 8px;
+  left: 0;
+  animation-delay: 0.5s;
+}
+
+.illo-deco3 {
+  top: 20px;
+  left: 0;
+  animation-delay: 1s;
+}
+
+.illo-deco4 {
+  bottom: 0;
+  right: 5px;
+  animation-delay: 1.5s;
+}
+
+@keyframes floatDeco {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(5deg);
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+.splash-logo-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.splash-logo-img {
+  inset: 0;
+  width: 160px;
+  height: auto;
+}
+
+/* Loader */
+.splash-loader {
+  width: 120px;
+  height: 4px;
+  background: var(--border);
+  border-radius: 99px;
+  margin-top: 32px;
+  /* overflow: hidden; */
+}
+
+.splash-loader-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #E67422, #FFB200);
+  border-radius: 99px;
+  animation: loadBar 2.4s ease-in-out forwards;
+}
+
+@keyframes loadBar {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}

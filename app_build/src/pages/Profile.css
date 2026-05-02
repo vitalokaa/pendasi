@@ -1,0 +1,104 @@
+/* Profile */
+.prof-page { background: var(--cream); }
+
+.prof-hero-card {
+  background: linear-gradient(135deg, var(--orange) 0%, #FFB200 100%);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: white;
+  position: relative;
+}
+.prof-avatar {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  flex-shrink: 0;
+}
+.prof-hero-info { flex: 1; }
+.prof-name { font-size: 22px; font-weight: 900; }
+.prof-age  { font-size: 13px; opacity: 0.85; margin-top: 4px; }
+.prof-badges {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+.prof-badges .chip {
+  background: rgba(255,255,255,0.25);
+  color: white;
+}
+.prof-edit-btn {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  border-radius: 50%;
+  width: 44px; height: 44px; /* HIG minimum */
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 16px; right: 16px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.prof-edit-btn:active {
+  transform: scale(0.9);
+  background: rgba(255,255,255,0.4);
+}
+
+/* Stats */
+.prof-stats-row { display: flex; gap: 16px; }
+.prof-stat-card {
+  flex: 1;
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+.prof-stat-num   { font-size: 24px; font-weight: 900; color: var(--orange); }
+.prof-stat-label { font-size: 11px; color: var(--text-muted); font-weight: 600; text-align: center; }
+
+/* Info rows */
+.prof-info-row { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; }
+.prof-info-label { font-size: 13px; color: var(--text-muted); font-weight: 600; }
+.prof-info-val   { font-size: 14px; font-weight: 800; color: var(--text-dark); }
+
+/* Exceptions */
+.prof-exceptions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* Field */
+.prof-field { display: flex; flex-direction: column; gap: 8px; padding: 8px 0; }
+.prof-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* About */
+.prof-about-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+.prof-about-icon { font-size: 28px; flex-shrink: 0; }
+.prof-about-card h3 { font-size: 14px; font-weight: 800; color: var(--text-dark); margin-bottom: 8px; }
+.prof-about-card p  { font-size: 13px; color: var(--text-muted); line-height: 1.5; }

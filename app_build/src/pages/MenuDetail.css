@@ -1,0 +1,172 @@
+/* Menu Detail */
+.md-page { background: var(--cream); padding-bottom: 0; }
+
+.md-hero {
+  position: relative;
+  height: 220px;
+  background: linear-gradient(135deg, var(--orange-pale), var(--yellow-pale));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.md-back-btn {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(255,255,255,0.85);
+  border: none;
+  border-radius: 50%;
+  width: 44px; height: 44px; /* HIG minimum */
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(4px);
+  z-index: 10;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.md-back-btn:active {
+  transform: scale(0.9);
+  background: rgba(255,255,255,1);
+}
+.md-hero-illo {
+  font-size: 96px;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.12));
+  animation: popIn 0.4s ease;
+}
+.md-hero-food-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  border: 2px solid white;
+  animation: popIn 0.4s ease;
+}
+.md-hero-gradient {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 60px;
+  background: linear-gradient(transparent, var(--cream));
+}
+.md-hero-meal-badge {
+  position: absolute;
+  top: 16px; right: 16px;
+  background: rgba(255,255,255,0.85);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--orange);
+  backdrop-filter: blur(4px);
+}
+
+.md-content {
+  padding: 24px 24px 104px;
+}
+.md-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.md-menu-name { font-size: 22px; font-weight: 900; color: var(--text-dark); margin-bottom: 8px; }
+.md-menu-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 24px; }
+
+.md-stats {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.md-stat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dark);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+.md-stat span:first-child { font-size: 14px; }
+
+/* Content Sections */
+/* Ingredients */
+.md-tab-content { display: flex; flex-direction: column; gap: 0; }
+.md-ingredient {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+.md-ingredient:last-child { border-bottom: none; }
+.md-ing-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.md-ing-name { flex: 1; font-size: 14px; font-weight: 700; color: var(--text-dark); }
+.md-ing-amount { font-size: 14px; font-weight: 800; }
+
+/* Steps */
+.md-step { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 16px; }
+.md-step-num {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.md-step p { font-size: 14px; color: var(--text-main); line-height: 1.6; padding-top: 3px; }
+
+/* Nutrition bars */
+.md-nutrient {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.md-nutrient-label { width: 100px; font-size: 13px; font-weight: 700; color: var(--text-muted); }
+.md-nutrient-bar-bg {
+  flex: 1;
+  height: 10px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.md-nutrient-bar-fill { height: 100%; border-radius: 99px; transition: width 0.6s ease; }
+.md-nutrient-val { width: 36px; font-size: 13px; font-weight: 800; text-align: right; }
+
+/* CTA */
+.md-respon-cta {
+  margin-top: 32px;
+  background: var(--orange-pale);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.md-respon-cta p { font-size: 14px; font-weight: 700; color: var(--text-dark); }
+
+.md-companion-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 4px 0;
+}
+.md-companion-row strong {
+  color: var(--text-dark);
+}
+.md-companion-row span {
+  color: var(--text-main);
+  text-align: right;
+}

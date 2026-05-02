@@ -1,0 +1,352 @@
+/* Weekly Plan */
+.wp-page {
+  padding-bottom: 90px;
+}
+
+.wp-refresh-btn {
+  background: var(--orange-pale);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orange);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.wp-refresh-btn:hover {
+  transform: rotate(180deg);
+}
+
+/* Hero card */
+.wp-hero-card {
+  background: linear-gradient(135deg, var(--orange) 0%, #FFB200 100%);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.wp-hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wp-hero-text .chip {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  font-size: 11px;
+  width: fit-content;
+  margin-bottom: 8px;
+}
+
+.wp-hero-text h2 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.wp-hero-text p {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.wp-hero-illo {
+  font-size: 48px;
+}
+
+/* Segmented Control */
+.wp-segmented {
+  display: flex;
+  background: var(--cream);
+  border-radius: 99px;
+  padding: 8px;
+  margin: 0 24px 24px;
+}
+
+.wp-seg-btn {
+  flex: 1;
+  padding: 16px;
+  text-align: center;
+  border-radius: 99px;
+  font-size: 13px;
+  font-weight: 700;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.wp-seg-btn.active {
+  background: var(--orange);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Day Section */
+.wp-plan-list {
+  padding-top: 16px;
+  padding-bottom: 104px;
+}
+
+.wp-section-group-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 24px 16px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.wp-day-section {
+  margin-bottom: 32px;
+  padding: 0 24px;
+}
+
+.wp-past {
+  filter: grayscale(1);
+  opacity: 0.65;
+}
+
+.wp-day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+
+.wp-day-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.wp-day-date-full {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.wp-change-btn-top {
+  display: none;
+  /* removed */
+}
+
+.wp-change-btn-meal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0 16px;
+  min-height: 44px; /* HIG minimum */
+  border-radius: 99px;
+  color: #1A3C6B;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.wp-change-btn-meal:active {
+  transform: scale(0.95);
+  opacity: 0.9;
+}
+
+.wp-change-btn-meal:hover {
+  background: #f8f9fa;
+  transform: scale(1.05);
+}
+
+/* Meal Cards */
+.wp-meal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wp-meal-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  background: white;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.wp-meal-card:active {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
+
+.wp-meal-card-header {
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wp-meal-card-header h3 {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.theme-pagi .wp-meal-card-header {
+  background: linear-gradient(135deg, #E2EEF9, #F5F9FD);
+  color: #1A3C6B;
+  position: relative;
+  overflow: hidden;
+}
+
+/* When background images are applied via inline style, let the image show through and add shadows */
+.theme-pagi .wp-meal-card-header h3,
+.theme-siang .wp-meal-card-header h3 {
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.7);
+}
+
+.theme-malam .wp-meal-card-header h3 {
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.theme-siang .wp-meal-card-header {
+  background: linear-gradient(135deg, #FDE6AC, #FFF5D6);
+  color: #8C6A1D;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-malam .wp-meal-card-header {
+  background: linear-gradient(135deg, #6A6E75, #8E939C);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-plain .wp-meal-card-header {
+  background: white;
+  color: var(--text-dark);
+  border-bottom: 1px solid var(--border);
+  justify-content: space-between;
+}
+
+.wp-meal-card-body {
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+}
+
+.wp-meal-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+
+.wp-meal-food-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+}
+
+.wp-meal-item-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.wp-meal-item-text strong {
+  font-size: 13px;
+  color: var(--text-dark);
+}
+
+.wp-meal-item-text span {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.wp-meal-plus {
+  font-size: 16px;
+  color: var(--text-light);
+  font-weight: 600;
+  padding: 0 16px;
+}
+
+/* Alternatives modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  width: 100%;
+  max-width: 480px;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  padding: 24px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.wp-alt-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wp-alt-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.wp-alt-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.wp-alt-info strong {
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.wp-alt-info span {
+  font-size: 12px;
+  color: var(--text-muted);
+}

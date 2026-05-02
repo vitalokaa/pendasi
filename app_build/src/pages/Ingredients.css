@@ -1,0 +1,64 @@
+/* Ingredients */
+.ing-page { background: var(--cream); }
+
+.ing-summary-card {
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: white;
+}
+.ing-summary-illo { font-size: 36px; }
+.ing-summary-card h2 { font-size: 22px; font-weight: 900; }
+.ing-summary-card p { font-size: 13px; opacity: 0.85; margin-top: 8px; }
+
+.ing-cat-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+.ing-cat-title {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.ing-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+}
+.ing-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.ing-item-info { flex: 1; }
+.ing-item-name { font-size: 14px; font-weight: 700; color: var(--text-dark); }
+.ing-item-meta { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+.ing-item-amount {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+.ing-item-amount span { font-size: 14px; font-weight: 800; }
+.ing-item-amount small { font-size: 11px; color: var(--text-light); }
+
+.ing-note {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: var(--yellow-pale);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.ing-note span { font-size: 18px; flex-shrink: 0; }
